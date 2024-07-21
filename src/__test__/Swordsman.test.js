@@ -1,11 +1,15 @@
-import Swordsman from './Swordsman';
+import Swordsman from "../js/class/Swordsman";
 
-describe('Swordsman', () => {
-  test('should create a Swordsman', () => {
-    const swordsman = new Swordsman('Aragorn');
-    expect(swordsman.name).toBe('Aragorn');
-    expect(swordsman.type).toBe('Swordsman');
-    expect(swordsman.attack).toBe(40);
-    expect(swordsman.defence).toBe(10);
-  });
+test('should create a Swordsman', () => {
+  const swordsman = new Swordsman('Swordsman');
+  const correct ={
+    attack: 40,
+    defence: 10,
+    health: 100,
+    level: 1,
+    name:'Swordsman',
+    type:'Swordsman',
+  };
+  
+  expect(swordsman).toThrow(correct);
 });

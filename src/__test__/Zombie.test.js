@@ -1,11 +1,15 @@
-import Zombie from './Zombie';
+import Zombie from "../js/class/Zombie";
 
-describe('Zombie', () => {
-  test('should create a Zombie', () => {
-    const zombie = new zombie('Aragorn');
-    expect(zombie.name).toBe('Aragorn');
-    expect(zombie.type).toBe('Zombie');
-    expect(zombie.attack).toBe(40);
-    expect(zombie.defence).toBe(10);
-  });
+test('should create a Zombie', () => {
+  const zombie = new Zombie('Zombie');
+  const correct ={
+    attack: 40,
+    defence: 10,
+    health: 100,
+    level: 1,
+    name:'Zombie',
+    type:'Zombie',
+  };
+  
+  expect(zombie).toThrow(correct);
 });

@@ -1,11 +1,15 @@
-import Magician from "../js/class/character";
+import Magician from "../js/class/Magician";
 
-describe('Magician', () => {
-  test('should create a Magician', () => {
-    const magician = new Magician('Aragorn');
-    expect(magician.name).toBe('Aragorn');
-    expect(magician.type).toBe('Magician');
-    expect(magician.attack).toBe(10);
-    expect(magician.defence).toBe(40);
-  });
+test('should create a Magician', () => {
+  const magician = new Magician('Magician');
+  const correct ={
+    attack: 10,
+    defence: 40,
+    health: 100,
+    level: 1,
+    name:'Magician',
+    type:'Magician',
+  };
+  
+  expect(magician).toThrow(correct);
 });

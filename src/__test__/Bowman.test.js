@@ -1,11 +1,15 @@
-import  Bowman  from '.__test__./Bowman';
+import Bowman from "../js/class/Bowman";
 
-
-  test('should create a Bowman', () => {
-    const bowman = new Bowman('Legolas');
-    expect(bowman.name).toBe('Legolas');
-    expect(bowman.type).toBe('Bowman');
-    expect(bowman.attack).toBe(25);
-    expect(bowman.defence).toBe(25);
-  });
-
+test('should create a Bowman', () => {
+  const bowman = new Bowman('John');
+  const correct ={
+    attack: 25,
+    defence: 25,
+    health: 100,
+    level: 1,
+    name:'Bowman',
+    type:'Bowman',
+  };
+  
+  expect(bowman).toThrow(correct);
+});
